@@ -1,3 +1,7 @@
+window.Twitch.ext.onAuthorized((auth) => {
+    console.log('got auth');
+});
+
 // refs to dom elements
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
