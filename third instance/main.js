@@ -40,24 +40,35 @@ function goNextPage() {
     if (currentLocation < maxLocation) {
         switch (currentLocation) {
             case 1:
+                //openBook();
                 paper1.classList.add("flipped");
+                paper1.style.zIndex = 1;
+                paper2.style.display = "none"; // Hide paper2
+                paper3.style.display = "none"; // Hide paper3
                 break;
             case 2:
-                paper1.classList.add("slide-out");
-                paper2.classList.add("slide-in");
+                paper2.style.zIndex = 2;
+                paper2.style.display = "block"; // Show paper2
+                paper3.style.display = "none"; // Hide paper3
                 break;
             case 3:
                 paper2.classList.add("flipped");
+                paper2.style.zIndex = 2;
+                paper2.style.display = "block"; // Show paper2
+                paper3.style.display = "none"; // Hide paper3
                 break;
             case 4:
-                paper2.classList.add("slide-out");
-                paper3.classList.add("slide-in");
-                paper2.style.zIndex = "2"; // Change z-index of paper2
-                paper1.style.zIndex = "1"; // Change z-index of paper1
+                paper3.style.zIndex = 3;
+                paper3.style.display = "block"; // Show paper2
+                paper2.style.display = "none"; // Hide paper2
                 break;
             case 5:
                 paper3.classList.add("flipped");
+                paper3.style.zIndex = 3;
+                paper3.style.display = "block"; // Show paper2
+                paper2.style.display = "none"; // Hide paper2
                 break;
+            //closeBook();
             default:
                 throw new Error("unknown state");
         }
@@ -65,26 +76,29 @@ function goNextPage() {
     }
 }
 
+
+
+
+
+
 function goPrevPage() {
     if (currentLocation > 1) {
         switch (currentLocation) {
             case 2:
+                closeBook(true);
                 paper1.classList.remove("flipped");
+                paper1.style.zIndex = 3;
                 break;
             case 3:
-                paper1.classList.remove("slide-out");
-                paper1.classList.add("slide-in");
-                paper2.classList.remove("slide-in");
+
                 paper2.classList.remove("flipped");
+                paper2.style.zIndex = 2;
                 break;
             case 4:
-                paper2.classList.remove("flipped");
-                break;
-            case 5:
-                paper2.classList.remove("slide-out");
-                paper2.classList.add("slide-in");
-                paper3.classList.remove("slide-in");
+                openBook();
+
                 paper3.classList.remove("flipped");
+                paper3.style.zIndex = 1;
                 break;
             default:
                 throw new Error("unknown state");

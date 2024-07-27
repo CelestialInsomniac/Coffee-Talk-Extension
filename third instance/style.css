@@ -70,22 +70,6 @@ body {
     transform: rotateY(-180deg);
 }
 
-/* Slide-in effect */
-.slide-in {
-    left: 0;
-    transition: translateX(350px);
-    transition-duration: 0.5s;
-    /* Move into view */
-}
-
-.slide-out {
-    left: 100%;
-    transition: translateX(-350px);
-    transition-duration: 1s;
-    /* Move out of view */
-}
-
-
 /* buttons */
 #previous {
     position: relative;
