@@ -52,8 +52,6 @@ function goNextPage() {
             case 4:
                 paper2.classList.add("slide-out");
                 paper3.classList.add("slide-in");
-                paper2.style.zIndex = "2"; // Change z-index of paper2
-                paper1.style.zIndex = "1"; // Change z-index of paper1
                 break;
             case 5:
                 paper3.classList.add("flipped");
