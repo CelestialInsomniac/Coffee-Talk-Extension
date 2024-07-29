@@ -1,11 +1,9 @@
 body {
-
     position: absolute;
-
     padding: 0px;
     margin: 0px;
-    width: 310px;
-    height: 496px;
+    width: 320px;
+    height: 500px;
     font-family: sans-serif;
     background-color: #636363;
 }
@@ -20,8 +18,8 @@ body {
 .book {
     padding: 0px;
     margin: 0px;
-    width: 310px;
-    height: 496px;
+    width: 320px;
+    height: 500px;
     transition: transform 0.5s;
 }
 
