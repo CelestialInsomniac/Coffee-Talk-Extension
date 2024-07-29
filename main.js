@@ -34,14 +34,20 @@ function goNextPage() {
                 break;
             case 2:
                 paper1.classList.add("slide-out");
-                paper2.classList.add("slide-in");
+                setTimeout(() => {
+                    paper1.classList.add("hidden");
+                    paper2.classList.add("slide-in");
+                }, 10);
                 break;
             case 3:
                 paper2.classList.add("flipped");
                 break;
             case 4:
                 paper2.classList.add("slide-out");
-                paper3.classList.add("slide-in");
+                setTimeout(() => {
+                    paper2.classList.add("hidden");
+                    paper3.classList.add("slide-in");
+                }, 10);
                 break;
             case 5:
                 next.style.display = "none";
@@ -64,8 +70,12 @@ function goPrevPage() {
             case 3:
                 paper1.classList.remove("slide-out");
                 paper1.classList.add("slide-in");
-                paper2.classList.remove("slide-in");
                 paper2.classList.remove("flipped");
+                paper2.classList.remove("slide-in");
+                paper1.classList.remove("hidden");
+                setTimeout(() => {
+                    paper1.classList.remove("slide-out");
+                }, 0);
                 break;
             case 4:
                 paper2.classList.remove("flipped");
@@ -73,8 +83,12 @@ function goPrevPage() {
             case 5:
                 paper2.classList.remove("slide-out");
                 paper2.classList.add("slide-in");
-                paper3.classList.remove("slide-in");
                 paper3.classList.remove("flipped");
+                paper3.classList.remove("slide-in");
+                paper2.classList.remove("hidden");
+                setTimeout(() => {
+                    paper2.classList.remove("slide-out");
+                }, 0);
                 break;
             case 6:
                 next.style.display = "block";
