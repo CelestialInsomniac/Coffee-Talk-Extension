@@ -111,7 +111,7 @@ body {
 #previous {
     position: absolute;
     left: 35px;
-    top: 450px;
+    top: 440px;
     width: 30px;
     height: 30px;
     z-index: 8;
@@ -124,7 +124,7 @@ body {
 #next {
     position: absolute;
     right: 40px;
-    top: 450px;
+    top: 440px;
     width: 30px;
     height: 30px;
     z-index: 8;
@@ -185,7 +185,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 86px;
+    top: 100px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -200,7 +200,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 161px;
+    top: 165px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -215,7 +215,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 236px;
+    top: 230px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -230,7 +230,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 311px;
+    top: 295px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -245,7 +245,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 386px;
+    top: 360px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -261,7 +261,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 86px;
+    top: 100px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -276,7 +276,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 161px;
+    top: 165px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -291,7 +291,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 236px;
+    top: 230px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -306,7 +306,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 311px;
+    top: 295px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -321,7 +321,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 386px;
+    top: 360px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -337,7 +337,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 86px;
+    top: 100px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -352,7 +352,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 161px;
+    top: 165px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -367,7 +367,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 236px;
+    top: 230px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -382,7 +382,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 311px;
+    top: 295px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -398,7 +398,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 86px;
+    top: 100px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -413,7 +413,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 161px;
+    top: 165px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -428,7 +428,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 236px;
+    top: 230px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -444,7 +444,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 86px;
+    top: 100px;
     height: 50px;
     width: 240px;
     margin-left: auto;
@@ -459,7 +459,7 @@ i {
     border: 0;
     left: 0px;
     right: 0px;
-    top: 161px;
+    top: 165px;
     height: 50px;
     width: 240px;
     margin-left: auto;
