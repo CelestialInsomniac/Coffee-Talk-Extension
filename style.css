@@ -127,8 +127,6 @@ body {
     cursor: pointer;
 }
 
-
-
 button:focus {
     outline: none;
 }
@@ -140,6 +138,33 @@ button:hover {
 i {
     font-size: 50px;
     color: white;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+    content: '';
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* coffee */

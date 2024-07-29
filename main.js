@@ -16,6 +16,56 @@ const cappuccinoButton = document.querySelector("#cappuccino");
 const espressoButton = document.querySelector("#espresso");
 const sugarSpiceButton = document.querySelector("#sugarspice");
 
+// JavaScript to show tooltips
+const buttons = document.querySelectorAll("button[data-tooltip]");
+
+buttons.forEach(button => {
+    button.addEventListener("mouseenter", showTooltip);
+    button.addEventListener("mouseleave", hideTooltip);
+});
+
+function showTooltip(event) {
+    const button = event.currentTarget;
+    const tooltipText = button.getAttribute("data-tooltip");
+
+    // Create tooltip element
+    const tooltip = document.createElement("div");
+    tooltip.className = "tooltip";
+    tooltip.textContent = tooltipText;
+
+    // Append tooltip to the body
+    document.body.appendChild(tooltip);
+
+    // Position the tooltip
+    const rect = button.getBoundingClientRect();
+    tooltip.style.top = `${rect.top + window.scrollY - tooltip.offsetHeight - 5}px`;
+    tooltip.style.left = `${rect.left + window.scrollX + (button.offsetWidth / 2) - (tooltip.offsetWidth / 2)}px`;
+
+    // Make the tooltip visible
+    tooltip.style.visibility = "visible";
+    tooltip.style.opacity = "1";
+
+    // Store the tooltip element on the button element for later removal
+    button._tooltip = tooltip;
+}
+
+function hideTooltip(event) {
+    const button = event.currentTarget;
+    const tooltip = button._tooltip;
+
+    if (tooltip) {
+        // Hide and remove the tooltip
+        tooltip.style.visibility = "hidden";
+        tooltip.style.opacity = "0";
+        setTimeout(() => {
+            document.body.removeChild(tooltip);
+        }, 300); // Wait for the transition to end
+
+        // Remove reference to the tooltip element
+        button._tooltip = null;
+    }
+}
+
 // event listeners
 previous.addEventListener("click", goPrevPage);
 next.addEventListener("click", goNextPage);
