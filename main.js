@@ -84,20 +84,26 @@ function goNextPage() {
                 break;
             case 2:
                 paper1.classList.add("slide-out");
+                paper1.classList.add("hidden");
                 setTimeout(() => {
-                    paper1.classList.add("hidden");
-                    paper2.classList.add("slide-in");
-                }, 10);
+                    paper1.classList.remove("slide-out");
+                }, 1000);
+                setTimeout(() => {
+                    paper1.classList.add("slide-in");
+                }, 1000);
                 break;
             case 3:
                 paper2.classList.add("flipped");
                 break;
             case 4:
                 paper2.classList.add("slide-out");
+                paper2.classList.add("hidden");
                 setTimeout(() => {
-                    paper2.classList.add("hidden");
-                    paper3.classList.add("slide-in");
-                }, 10);
+                    paper2.classList.remove("slide-out");
+                }, 1000);
+                setTimeout(() => {
+                    paper2.classList.add("slide-in");
+                }, 1000);
                 break;
             case 5:
                 next.style.display = "none";
@@ -118,27 +124,42 @@ function goPrevPage() {
                 paper1.classList.remove("flipped");
                 break;
             case 3:
-                paper1.classList.remove("slide-out");
-                paper1.classList.add("slide-in");
-                paper2.classList.remove("flipped");
-                paper2.classList.remove("slide-in");
-                paper1.classList.remove("hidden");
+                paper1.classList.remove("slide-in");
+
+                // Add slide-out class after a short delay
                 setTimeout(() => {
-                    paper1.classList.remove("slide-out");
+                    paper1.classList.add("slide-out");
+
                 }, 0);
+                // Remove slide-out class after the slide-out animation completes
+                setTimeout(() => {
+                    paper1.classList.add("slide-in");
+                    paper1.classList.remove("hidden");
+                    // Add slide-in class to trigger the slide-in animation
+                    setTimeout(() => {
+                        paper1.classList.remove("slide-out");
+                    }, 100); // Adjust this delay to ensure smooth transition
+                }, 700);
                 break;
+
             case 4:
                 paper2.classList.remove("flipped");
                 break;
             case 5:
-                paper2.classList.remove("slide-out");
-                paper2.classList.add("slide-in");
-                paper3.classList.remove("flipped");
-                paper3.classList.remove("slide-in");
-                paper2.classList.remove("hidden");
+                paper2.classList.remove("slide-in");
+                // Add slide-out class after a short delay
                 setTimeout(() => {
-                    paper2.classList.remove("slide-out");
+                    paper2.classList.add("slide-out");
                 }, 0);
+                // Remove slide-out class after the slide-out animation completes
+                setTimeout(() => {
+                    paper2.classList.add("slide-in");
+                    paper2.classList.remove("hidden");
+                    // Add slide-in class to trigger the slide-in animation
+                    setTimeout(() => {
+                        paper2.classList.remove("slide-out");
+                    }, 100); // Adjust this delay to ensure smooth transition
+                }, 700);
                 break;
             case 6:
                 next.style.display = "block";
