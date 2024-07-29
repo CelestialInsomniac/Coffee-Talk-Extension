@@ -148,11 +148,13 @@ i {
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 12px;
-    white-space: nowrap;
+    white-space: normal;
     z-index: 10;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s;
+    max-width: 230px; /* vorher war 200 */
+    word-wrap: break-word;
 }
 
 /* Tooltip arrow */
